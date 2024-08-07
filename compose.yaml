@@ -1,0 +1,26 @@
+---
+services:
+  coordinator:
+    image: labgrid/coordinator:latest
+    platform: linux/amd64
+    hostname: coordinator
+    restart: always
+    volumes:
+    - ./conf/coordinator:/opt/crossbar
+    ports:
+    - 20408:20408
+  exporter:
+    image: labgrid/exporter:latest
+    platform: linux/amd64
+    hostname: exporter
+    restart: always
+    privileged: true
+    volumes:
+    - ./conf/exporter/exporter.yaml:/opt/conf/exporter.yaml
+    - /dev:/dev
+    - /run/udev:/run/udev
+    command: /entrypoint.sh -x ws://coordinator:20408/ws -i
+    deploy:
+      resources:
+        limits:
+          memory: 1G

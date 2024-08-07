@@ -1,0 +1,20 @@
+---
+places:
+  franz:
+    comment: Franz machine
+    matches:
+    - exporter/franz-1/*
+    tags:
+      dut: franz
+  johann:
+    comment: Johann machine
+    matches:
+    - exporter/johann-2/*
+    tags:
+      dut: johann
+  xaver:
+    comment: Xaver machine
+    matches:
+    - exporter/xaver-3/*
+    tags:
+      dut: xaver

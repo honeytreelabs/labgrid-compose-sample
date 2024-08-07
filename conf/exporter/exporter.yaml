@@ -1,0 +1,28 @@
+---
+# set places = {
+  1 : { "name" : "franz", "usbserial-id" : "AB0PPYM8", "ip" : 18 },
+  2 : { "name" : "johann", "ip" : 19 },
+  3 : { "name" : "xaver", "ip" : 20 },
+}
+
+# for slot, place_info in places.items()
+
+{{ place_info["name"] }}-{{ slot }}:
+  # if "usbserial-id" in place_info
+  USBSerialPort:
+    match:
+      ID_SERIAL_SHORT: '{{ place_info["usbserial-id"] }}'
+  # endif
+
+  X1:
+    cls: NetworkService
+    # if "ip" in place_info
+    address: "192.168.1.{{ place_info["ip"] }}"
+    # else
+    address: "192.168.1.{{ slot }}"
+    # endif
+    username: root
+    # if "password" in place_info
+    password: {{ place_info["password"] }}
+    # endif
+# endfor

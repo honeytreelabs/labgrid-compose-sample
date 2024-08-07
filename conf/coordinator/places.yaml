@@ -1,0 +1,51 @@
+franz:
+  acquired: null
+  acquired_resources: []
+  aliases: []
+  allowed: []
+  changed: 1722889348.5677533
+  comment: ''
+  created: 1722859608.0492988
+  matches:
+  - cls: '*'
+    exporter: exporter
+    group: franz-1
+    name: null
+    rename: null
+  reservation: null
+  tags:
+    dut: franz
+johann:
+  acquired: null
+  acquired_resources: []
+  aliases: []
+  allowed: []
+  changed: 1722859608.0580366
+  comment: ''
+  created: 1722859608.0509996
+  matches:
+  - cls: '*'
+    exporter: exporter
+    group: johann-2
+    name: null
+    rename: null
+  reservation: null
+  tags:
+    dut: johann
+xaver:
+  acquired: null
+  acquired_resources: []
+  aliases: []
+  allowed: []
+  changed: 1722859608.0617816
+  comment: ''
+  created: 1722859608.0525265
+  matches:
+  - cls: '*'
+    exporter: exporter
+    group: xaver-3
+    name: null
+    rename: null
+  reservation: null
+  tags:
+    dut: xaver

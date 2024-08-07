@@ -1,0 +1,46 @@
+exporter:
+  franz-1:
+    USBSerialPort:
+      acquired: null
+      avail: false
+      cls: NetworkSerialPort
+      params:
+        extra:
+          path: null
+          proxy: exporter
+          proxy_required: true
+        host: exporter
+        port: null
+        speed: 115200
+    X1:
+      acquired: null
+      avail: true
+      cls: NetworkService
+      params:
+        address: 192.168.1.18
+        extra:
+          proxy: exporter
+          proxy_required: true
+        username: root
+  johann-2:
+    X1:
+      acquired: null
+      avail: true
+      cls: NetworkService
+      params:
+        address: 192.168.1.19
+        extra:
+          proxy: exporter
+          proxy_required: true
+        username: root
+  xaver-3:
+    X1:
+      acquired: null
+      avail: true
+      cls: NetworkService
+      params:
+        address: 192.168.1.20
+        extra:
+          proxy: exporter
+          proxy_required: true
+        username: root
