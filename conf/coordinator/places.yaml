@@ -1,51 +1,51 @@
-franz:
+first:
   acquired: null
   acquired_resources: []
   aliases: []
   allowed: []
-  changed: 1722889348.5677533
+  changed: 1724077518.212901
   comment: ''
   created: 1722859608.0492988
   matches:
   - cls: '*'
-    exporter: exporter
-    group: franz-1
+    exporter: knirps-04
+    group: first-1
     name: null
     rename: null
   reservation: null
   tags:
-    dut: franz
-johann:
+    dut: first
+second:
   acquired: null
   acquired_resources: []
   aliases: []
   allowed: []
-  changed: 1722859608.0580366
+  changed: 1724063779.6710403
   comment: ''
   created: 1722859608.0509996
   matches:
   - cls: '*'
-    exporter: exporter
-    group: johann-2
+    exporter: knirps-04
+    group: second-2
     name: null
     rename: null
   reservation: null
   tags:
-    dut: johann
-xaver:
+    dut: second
+third:
   acquired: null
   acquired_resources: []
   aliases: []
   allowed: []
-  changed: 1722859608.0617816
+  changed: 1724063779.6741655
   comment: ''
   created: 1722859608.0525265
   matches:
   - cls: '*'
-    exporter: exporter
-    group: xaver-3
+    exporter: knirps-04
+    group: third-3
     name: null
     rename: null
   reservation: null
   tags:
-    dut: xaver
+    dut: third

@@ -1,20 +1,20 @@
 ---
 places:
-  franz:
-    comment: Franz machine
+  first:
+    comment: First machine
     matches:
-    - exporter/franz-1/*
+    - knirps-04/first-1/*
     tags:
-      dut: franz
-  johann:
-    comment: Johann machine
+      dut: first
+  second:
+    comment: Second machine
     matches:
-    - exporter/johann-2/*
+    - knirps-04/second-2/*
     tags:
-      dut: johann
-  xaver:
-    comment: Xaver machine
+      dut: second
+  third:
+    comment: Third machine
     matches:
-    - exporter/xaver-3/*
+    - knirps-04/third-3/*
     tags:
-      dut: xaver
+      dut: third

@@ -1,0 +1,22 @@
+---
+targets:
+  main:
+    resources:
+    - RemotePlace:
+        name: first
+    drivers:
+    - SerialDriver:
+        name: primary
+        bindings:
+          port: primary
+    - SerialDriver:
+        name: secondary
+        bindings:
+          port: secondary
+    - ShellDriver:
+        prompt: '\x1b\[\?2004hpi@\w+:[^ ]+ '
+        login_prompt: ' login: '
+        username: pi
+        password: raspberry
+        bindings:
+          console: secondary

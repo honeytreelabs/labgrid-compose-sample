@@ -1,17 +1,25 @@
 ---
+{# Determine the usbserial-id: `udevadm info --name=/dev/ttyUSB0 --query=all | grep ID_USB_SERIAL_SHORT | cut -d= -f2` #}
 # set places = {
-  1 : { "name" : "franz", "usbserial-id" : "AB0PPYM8", "ip" : 18 },
-  2 : { "name" : "johann", "ip" : 19 },
-  3 : { "name" : "xaver", "ip" : 20 },
+  1 : { "name": "first", "primary-usbserial-id": "AB0PPYM8", "secondary-usbserial-id": "AB8ACH0E", "ip": 18 },
+  2 : { "name": "second", "ip": 19 },
+  3 : { "name": "third", "ip": 20 },
 }
 
 # for slot, place_info in places.items()
 
 {{ place_info["name"] }}-{{ slot }}:
-  # if "usbserial-id" in place_info
-  USBSerialPort:
+  # if "primary-usbserial-id" in place_info
+  primary:
+    cls: USBSerialPort
     match:
-      ID_SERIAL_SHORT: '{{ place_info["usbserial-id"] }}'
+      ID_SERIAL_SHORT: '{{ place_info["primary-usbserial-id"] }}'
+  # endif
+  # if "secondary-usbserial-id" in place_info
+  secondary:
+    cls: USBSerialPort
+    match:
+      ID_SERIAL_SHORT: '{{ place_info["secondary-usbserial-id"] }}'
   # endif
 
   X1:
